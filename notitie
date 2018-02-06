@@ -2,3 +2,6 @@ Javascript challenge to do lijst:
 
 -	eens button werkent maken
 -	oneens button aan he werkent maken
+-	bijhouden wat je gekozen hebt bij elke subject.
+		subject[nr]
+		gekozen[ 1=eens, 2=oneens, 3=sla over]
