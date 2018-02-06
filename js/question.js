@@ -109,7 +109,7 @@ function setAgree()
 	}
 }
 
-function disAgree()
+function setDisAgree()
 {
 	var subject = subjects[num];
 	subject = false;
