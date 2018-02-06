@@ -12,3 +12,8 @@ button
 	text-align: center;
 	margin: 2px;
 }
+
+#agree, #disagree, #back
+{
+	visibility: hidden;
+}

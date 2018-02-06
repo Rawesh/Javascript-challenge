@@ -94,6 +94,10 @@
 	{name: "Artikel 1", position: "contra", explanation: "Anoniem solliciteren legt de verantwoordelijkheid om arbeidsdiscriminatie tegen te gaan bij de sollicitant. Artikel 1 pleit voor voorlichting onder werkgevers en diversiteitsquota. Wij vinden het onacceptabel om mensen te vragen een deel van hun identiteit te verhullen om geaccepteerd te worden."},
 	{name: "Libertarische Partij", position: "contra", explanation: "We willen geen discriminatie bij de overheid zien. Artikel 1 van de grondwet verbiedt dit. Keuzes voor aanstellingen bij de overheid dienen op basis van kwaliteiten die onderzocht moeten kunnen worden. Daarbij past anoniem solliciteren niet."}
 	] 
+},
+{
+	title: "Einde",
+	statement: "U heeft het einde bereikt."
 }
 ];
 
