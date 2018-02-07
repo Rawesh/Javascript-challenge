@@ -29,7 +29,6 @@ function compare(choise, num)
 	{
 		var party = subjects[num].parties[parties].name;
 		var vote = subjects[num].parties[parties].position;
-		// console.log(party, vote);
 		if (choise === vote)
 		{
 			for( i in score[0].status)
@@ -47,8 +46,4 @@ function compare(choise, num)
 	}	
 }
 
-function setScore()
-{
-
-}
 
