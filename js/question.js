@@ -17,17 +17,31 @@ var rh = document.getElementById("result_header");
 var rq = document.getElementById("result_question");
 var rv = document.getElementById("result_vote");
 
-for (var i = 0; i < subjects.length; i++)
-{	console.log(subjects[i]);
-	for (parties in subjects[i].parties)
-	{
-		console.log(subjects[i].parties[parties]);
-	}	
-}
-
 // arrays
 var num = -1;
 var choises = [];
+var score = 
+[
+	{name: "VVD", total: 0},
+	{name: "CDA", total: 0},
+	{name: "PVV", total: 0},
+	{name: "D66", total: 0},
+	{name: "GroenLinks", total: 0},
+	{name: "SP", total: 0},
+	{name: "PvdA", total: 0},
+	{name: "ChristenUnie", total: 0},
+	{name: "Partij voor de Dieren", total: 0},
+	{name: "SGP", total: 0},
+	{name: "DENK", total: 0},
+	{name: "Forum voor Democratie", total: 0},
+	{name: "OndernemersPartij", total: 0},
+	{name: "VNL", total: 0},
+	{name: "Nieuwe Wegen", total: 0},
+	{name: "De Burger Beweging", total: 0},
+	{name: "Piratenpartij", total: 0},
+	{name: "Artikel 1", total: 0},
+	{name: "Libertarische Partij", total: 0}
+]
 
 function begin()
 {
@@ -97,7 +111,7 @@ function goBack()
 
 function setNon()
 {
-	var choise = choises[num] = 'Geen van beide';
+	return choises[num] = 'ambivalent';
 
 	//this count num up
 	num++;
@@ -118,8 +132,8 @@ function setNon()
 
 function setAgree()
 {	
-	var choise = choises[num] = 'Eens';
-
+	var choise = choises[num] = 'pro';
+	compare(choise, num);
 	//this count num up
 	num++;
 
@@ -139,7 +153,7 @@ function setAgree()
 
 function setDisAgree()
 {
-	var choise = choises[num] = 'Oneens';
+	return choises[num] = 'contra';
 
 	num++;
 

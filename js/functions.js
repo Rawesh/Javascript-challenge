@@ -23,3 +23,21 @@ function buttonAttr()
 	}
 }
 
+function compare(choise, num)
+{
+	for (parties in subjects[num].parties)
+	{
+		var party = subjects[num].parties[parties].name;
+		var vote = subjects[num].parties[parties].position;
+		console.log(party, vote);
+		if (choise === vote)
+		{
+			console.log("Is gelijk")
+		}
+		else
+		{
+			console.log("Is niet gelijk")
+		}
+	}	
+}
+
