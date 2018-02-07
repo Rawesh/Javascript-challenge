@@ -1,3 +1,6 @@
 Javascript challenge to do lijst:
 
--	Stemmen van de partijen erbij halen.
+-	stemmen bijhouden per vraag +
+-	jou stem per vraag per partij vergelijken :
+		WAT WIL IK VERGELIJKEN =
+			Als mijn stem gelijk is aan de stem van de partij, geef partij 1 punt anders 0.

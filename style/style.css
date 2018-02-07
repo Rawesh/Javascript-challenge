@@ -1,10 +1,9 @@
 article
 {
-	margin: auto;
+	margin: 0 auto;
     width: 40%;
-    border: 3px solid;
     padding: 10px;
-    background-color: lightblue;
+    background-color: cyan;
     font-size: 20px;
 }
 
@@ -13,16 +12,46 @@ button
 	text-align: center;
 	margin: 2px;
 	width: 15%;
-	height: 30px;
+	height: 35px;
 	background-color: lightgray;
-	border-radius: 40%;
 }
 
 button:hover
 {
-	width: 20%;
-	height: 35px;
+	width: 25%;
+	height: 40px;
 	background-color: lightgreen;
+}
+
+hr
+{
+  height: 10px;
+  border: 0;
+  box-shadow: 0 10px 10px -10px #8c8c8c inset;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table
+{
+	width: 100%;
+}
+
+table tr:nth-child(even) {
+    background-color: #FFDAB9;
+}
+table tr:nth-child(odd) {
+   background-color: #CD853F;
+}
+
+th
+{
+	background-color: black;
+	color: white;
+	text-align: left;
 }
 
 #back
@@ -35,7 +64,7 @@ button:hover
 	visibility: visible;
 }
 
-#agree, #disagree, #back, #skip
+#agree, #disagree, #back, #skip, #result, #non
 {
 	visibility: hidden;
 }

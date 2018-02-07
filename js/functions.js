@@ -14,9 +14,12 @@ function buttonAttr()
 		disagree.style.visibility = "hidden";
 		skip.style.visibility = "hidden";
 		back.style.visibility = "hidden";
+		non.style.visibility = "hidden";
+		result.style.visibility = "visible";
 	}
 	else
 	{
 		back.style.visibility = "hidden";	
 	}
 }
+

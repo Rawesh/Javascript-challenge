@@ -1,17 +1,33 @@
 // select the elements
+// content
 var header = document.getElementById("header");
 var question = document.getElementById("question");
+
+//buttons
 var agree = document.getElementById("agree");
 var disagree = document.getElementById("disagree");
 var skip = document.getElementById("skip");
 var back = document.getElementById("back");
 var start = document.getElementById("start");
+var non = document.getElementById("non");
+var result = document.getElementById("result");
 
-// array vote
-var vote = ["Eens", "Oneens", "Overgeslagen"];
+// result elements
+var rh = document.getElementById("result_header");
+var rq = document.getElementById("result_question");
+var rv = document.getElementById("result_vote");
 
-// set value of num -1
-num = 0 -1;
+for (var i = 0; i < subjects.length; i++)
+{	console.log(subjects[i]);
+	for (parties in subjects[i].parties)
+	{
+		console.log(subjects[i].parties[parties]);
+	}	
+}
+
+// arrays
+var num = -1;
+var choises = [];
 
 function begin()
 {
@@ -19,6 +35,7 @@ function begin()
 	agree.style.visibility = "visible";
 	disagree.style.visibility = "visible";
 	skip.style.visibility = "visible";
+	non.style.visibility = "visible";
 	start.style.visibility = "hidden";
 
 	// set question in header and title
@@ -36,10 +53,6 @@ function begin()
 
 function skipQuestion()
 {
-	// set question on value array 2
-	var subject = subjects[num];
-	subject = vote[2];
-
 	//this count num up
 	num++;
 
@@ -53,7 +66,6 @@ function skipQuestion()
 	//write to console
 	console.log(subjects[num].title);
 	console.log(subjects[num].statement);
-	console.log(subject);
 	console.log(num);
 }
 
@@ -83,11 +95,9 @@ function goBack()
 	console.log(question);
 }
 
-function setAgree()
+function setNon()
 {
-	// set question on value array 0
-	var subject = subjects[num];
-	subject = vote[0];
+	var choise = choises[num] = 'Geen van beide';
 
 	//this count num up
 	num++;
@@ -102,15 +112,34 @@ function setAgree()
 	//write to console
 	console.log(subjects[num].title);
 	console.log(subjects[num].statement);
-	console.log(subject);
+	console.log(choise);
+	console.log(num);
+}
+
+function setAgree()
+{	
+	var choise = choises[num] = 'Eens';
+
+	//this count num up
+	num++;
+
+	// set question in header and title
+	header.innerHTML = subjects[num].title;
+	question.innerHTML = subjects[num].statement;
+
+	//make buttons visible if needed
+	buttonAttr();
+
+	//write to console
+	console.log(subjects[num].title);
+	console.log(subjects[num].statement);
+	console.log(choise);
 	console.log(num);
 }
 
 function setDisAgree()
 {
-	// set question on value array 1
-	var subject = subjects[num];
-	subject = vote[1];
+	var choise = choises[num] = 'Oneens';
 
 	num++;
 
@@ -124,7 +153,7 @@ function setDisAgree()
 	//write to console
 	console.log(subjects[num].title);
 	console.log(subjects[num].statement);
-	console.log(subject);
+	console.log(choise);
 	console.log(num);
 }
 
