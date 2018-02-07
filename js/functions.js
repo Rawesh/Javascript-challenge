@@ -29,15 +29,26 @@ function compare(choise, num)
 	{
 		var party = subjects[num].parties[parties].name;
 		var vote = subjects[num].parties[parties].position;
-		console.log(party, vote);
+		// console.log(party, vote);
 		if (choise === vote)
 		{
-			console.log("Is gelijk")
-		}
-		else
-		{
-			console.log("Is niet gelijk")
+			for( i in score[0].status)
+			{
+				var names = score[0].status[i].name;
+				var totalScore = score[0].status[i].total;
+				if (names === party)
+				{
+					totalScore++
+					console.log(names, totalScore);
+
+				}
+			}
 		}
 	}	
+}
+
+function setScore()
+{
+
 }
 
