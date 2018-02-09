@@ -32,35 +32,37 @@ function compare(choise, num)
 		// If my choise is the same as party choise.
 		if (choise === vote)
 		{   // Get status array.
-			for( i in score[0].status)
+			for( i in scores)
 			{
-				var names = score[0].status[i].name;
-				var totalScore = score[0].status[i].total;
+				var names = scores[i].name;
+				var totalScore = scores[i].total;
 				// If array score party name is the same as
 				// array subject party name.
 				if (names === party)
 				{
 					var cells = document.getElementsByClassName('cell');
-					score[0].status[i].total += 1;
-					cells[i].innerHTML = score[0].status[i].total;
-					console.log(names, score[0].status[i].total);					
+					scores[i].total += 1;
+					cells[i].innerHTML = scores[i].total;
+					console.log(scores[i].total);					
 				}
 			}
 		}
 		else
 		{
-			for( i in score[0].status)
+			for( i in scores)
 			{
-				var names = score[0].status[i].name;
-				var totalScore = score[0].status[i].total;
+				var names = scores[i].name;
+				var totalScore = scores[i].total;
 				// If array score party name is the same as
 				// array subject party name.
 				if (names === party)
 				{
-					score[0].status[i].total += 0;
-					console.log(names, score[0].status[i].total);					
+					scores[i].total += 0;
+					console.log(names, scores[i].total);					
 				}
 			}	
 		}
-	}	
+	}
+
+	scores.sort(function(a, b){return b.total - a.total});
 }

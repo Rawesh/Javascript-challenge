@@ -18,47 +18,41 @@ var table = document.getElementById("table");
 // arrays
 var num = -1;
 var choises = [];
-var score = 
-[
-	{
-		status: [
-			{name: "VVD", total: 0},
-			{name: "CDA", total: 0},
-			{name: "PVV", total: 0},
-			{name: "D66", total: 0},
-			{name: "GroenLinks", total: 0},
-			{name: "SP", total: 0},
-			{name: "PvdA", total: 0},
-			{name: "ChristenUnie", total: 0},
-			{name: "Partij voor de Dieren", total: 0},
-			{name: "SGP", total: 0},
-			{name: "DENK", total: 0},
-			{name: "Forum voor Democratie", total: 0},
-			{name: "OndernemersPartij", total: 0},
-			{name: "VNL", total: 0},
-			{name: "Nieuwe Wegen", total: 0},
-			{name: "De Burger Beweging", total: 0},
-			{name: "Piratenpartij", total: 0},
-			{name: "Artikel 1", total: 0},
-			{name: "50plus", total: 0},
-			{name: "Libertarische Partij", total: 0}
-		]
-	}
+var scores = [
+	{name: "VVD", total: 0},
+	{name: "CDA", total: 0},
+	{name: "PVV", total: 0},
+	{name: "D66", total: 0},
+	{name: "GroenLinks", total: 0},
+	{name: "SP", total: 0},
+	{name: "PvdA", total: 0},
+	{name: "ChristenUnie", total: 0},
+	{name: "Partij voor de Dieren", total: 0},
+	{name: "SGP", total: 0},
+	{name: "DENK", total: 0},
+	{name: "Forum voor Democratie", total: 0},
+	{name: "OndernemersPartij", total: 0},
+	{name: "VNL", total: 0},
+	{name: "Nieuwe Wegen", total: 0},
+	{name: "De Burger Beweging", total: 0},
+	{name: "Piratenpartij", total: 0},
+	{name: "Artikel 1", total: 0},
+	{name: "50plus", total: 0},
+	{name: "Libertarische Partij", total: 0}
 ];
 
 // set values in table
-for (partyName in score[0].status)
+for (i in scores)
 {
-	var names = score[0].status[partyName].name;
-	var total = score[0].status[partyName].total;
 
+	console.dir(scores[i]);
 	// create alements
 	var tr = document.createElement("tr");
 	var td = document.createElement("td");
 	
 	// text in element in var 
-	var pNames = document.createTextNode(names);
-	var pScore = document.createTextNode(total);
+	var pNames = document.createTextNode(scores[i].name);
+	var pScore = document.createTextNode(scores[i].total);
 
 	// set text in element, element in element
 	td.appendChild(pNames);
@@ -208,6 +202,6 @@ function getResult()
 {
 	result.style.visibility = "hidden";
 	table.style.visibility = "visible";
-	
+
 }
 
