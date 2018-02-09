@@ -40,7 +40,9 @@ function compare(choise, num)
 				// array subject party name.
 				if (names === party)
 				{
+					var cells = document.getElementsByClassName('cell');
 					score[0].status[i].total += 1;
+					cells[i].innerHTML = score[0].status[i].total;
 					console.log(names, score[0].status[i].total);					
 				}
 			}
@@ -62,5 +64,3 @@ function compare(choise, num)
 		}
 	}	
 }
-
-

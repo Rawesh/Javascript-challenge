@@ -1,4 +1,6 @@
 Javascript challenge to do lijst:
 
 - partij 50 plus wilt niet in de console.log maar staat wel in de var names.
--	resultaat tonen
+- filteren op grote partijen en seculiere partijen
+- resultaten score sorteren
+- per vraag meer gewicht geven

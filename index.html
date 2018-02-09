@@ -4,35 +4,30 @@
 	<title>Stemwijzer</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 <body>
 
 <article>
-
 	<h1 id="header">StemWijzer</h1>
 	<p id="question">Door op start te klikken begint u de stemwijzer</p>
 
 	<button id="start" onclick="begin()">Start</button>
 	<button id="agree" onclick="setAgree()">Eens</button>
 	<button id="disagree" onclick="setDisAgree()">Oneens</button>
-	<button id="non" onclick="setNon()">Geen</button>
+	<button id="non" onclick="setNon()">Geen van beide</button>
 	<button id="skip" onclick="skipQuestion()">Sla over</button>
 	<br>
-	<button id="back" onclick="goBack()">Terug</button>
+	<button id="back" onclick="goBack()"><i class="fas fa-chevron-circle-left" style="font-size:30px;"></i></button>
 	<button id="result" onclick="getResult()">Resultaat</button>
 
 	<hr>
 
-	<table>
+	<center><b>Resultaten:</b></center>
+	<table id="table">
 		<tr>
 			<th>Partijen</th>
 			<th>Stem</th>
-			<th>Toelichting</th>
-		</tr>
-		<tr>
-			<td id="result_header"></td>
-			<td id="result_question"></td>
-			<td id="result_vote"></td>
 		</tr>
 	</table>
 

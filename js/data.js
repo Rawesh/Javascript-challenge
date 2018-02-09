@@ -97,7 +97,7 @@ var subjects =
 },
 {
 	title: "Einde",
-	statement: "U heeft het einde bereikt."
+	statement: "Druk op resultaat om de scores van de partijen te zien."
 }
 ];
 

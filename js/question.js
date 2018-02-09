@@ -13,9 +13,7 @@ var non = document.getElementById("non");
 var result = document.getElementById("result");
 
 // result elements
-var rh = document.getElementById("result_header");
-var rq = document.getElementById("result_question");
-var rv = document.getElementById("result_vote");
+var table = document.getElementById("table");
 
 // arrays
 var num = -1;
@@ -42,11 +40,38 @@ var score =
 			{name: "De Burger Beweging", total: 0},
 			{name: "Piratenpartij", total: 0},
 			{name: "Artikel 1", total: 0},
-			{name: "50 plus", total: 0},
+			{name: "50plus", total: 0},
 			{name: "Libertarische Partij", total: 0}
 		]
 	}
 ];
+
+// set values in table
+for (partyName in score[0].status)
+{
+	var names = score[0].status[partyName].name;
+	var total = score[0].status[partyName].total;
+
+	// create alements
+	var tr = document.createElement("tr");
+	var td = document.createElement("td");
+	
+	// text in element in var 
+	var pNames = document.createTextNode(names);
+	var pScore = document.createTextNode(total);
+
+	// set text in element, element in element
+	td.appendChild(pNames);
+	tr.appendChild(td);
+	// hier moet nog de score van de compare functie komen
+	td = document.createElement("td");
+	td.className = 'cell';
+	td.appendChild(pScore);
+	tr.appendChild(td);
+
+	// --------------------
+	table.appendChild(tr);
+}
 
 function begin()
 {
@@ -177,5 +202,12 @@ function setDisAgree()
 	console.log(subjects[num].statement);
 	console.log(choise);
 	console.log(num);
+}
+
+function getResult()
+{
+	result.style.visibility = "hidden";
+	table.style.visibility = "visible";
+	
 }
 
