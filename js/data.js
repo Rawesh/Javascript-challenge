@@ -1,4 +1,4 @@
- var subjects = 
+var subjects = 
 [
 /* example subject with parties and their positions:
 {
@@ -120,6 +120,7 @@ var parties = [
 	{name: "De Burger Beweging", secular: true, size: 0},
 	{name: "Piratenpartij", secular: true, size: 0},
 	{name: "Artikel 1", secular: true, size: 0},
+	{name: "50 plus", secular: true, size: 0},
 	{name: "Libertarische Partij", secular: true, size: 0}
 ];
 

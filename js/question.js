@@ -42,6 +42,7 @@ var score =
 			{name: "De Burger Beweging", total: 0},
 			{name: "Piratenpartij", total: 0},
 			{name: "Artikel 1", total: 0},
+			{name: "50 plus", total: 0},
 			{name: "Libertarische Partij", total: 0}
 		]
 	}
@@ -115,7 +116,9 @@ function goBack()
 
 function setNon()
 {
-	return choises[num] = 'ambivalent';
+	var choise = choises[num] = 'ambivalent';
+	compare(choise, num);
+
 
 	//this count num up
 	num++;
@@ -157,7 +160,8 @@ function setAgree()
 
 function setDisAgree()
 {
-	return choises[num] = 'contra';
+	var choise = choises[num] ='contra';
+	compare(choise, num);
 
 	num++;
 

@@ -24,24 +24,41 @@ function buttonAttr()
 }
 
 function compare(choise, num)
-{
+{   // Get array parties.
 	for (parties in subjects[num].parties)
 	{
 		var party = subjects[num].parties[parties].name;
 		var vote = subjects[num].parties[parties].position;
+		// If my choise is the same as party choise.
 		if (choise === vote)
+		{   // Get status array.
+			for( i in score[0].status)
+			{
+				var names = score[0].status[i].name;
+				var totalScore = score[0].status[i].total;
+				// If array score party name is the same as
+				// array subject party name.
+				if (names === party)
+				{
+					score[0].status[i].total += 1;
+					console.log(names, score[0].status[i].total);					
+				}
+			}
+		}
+		else
 		{
 			for( i in score[0].status)
 			{
 				var names = score[0].status[i].name;
 				var totalScore = score[0].status[i].total;
+				// If array score party name is the same as
+				// array subject party name.
 				if (names === party)
 				{
-					totalScore++
-					console.log(names, totalScore);
-
+					score[0].status[i].total += 0;
+					console.log(names, score[0].status[i].total);					
 				}
-			}
+			}	
 		}
 	}	
 }

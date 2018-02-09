@@ -1,6 +1,4 @@
 Javascript challenge to do lijst:
 
--	stemmen bijhouden per vraag +
--	jou stem per vraag per partij vergelijken :
-		WAT WIL IK VERGELIJKEN =
-			Als mijn stem gelijk is aan de stem van de partij, geef partij 1 punt anders 0.
+- partij 50 plus wilt niet in de console.log maar staat wel in de var names.
+-	resultaat tonen
