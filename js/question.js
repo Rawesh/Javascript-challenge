@@ -200,8 +200,20 @@ function setDisAgree()
 
 function getResult()
 {
+	var cells = document.getElementsByClassName('cell');
+
+
 	result.style.visibility = "hidden";
 	table.style.visibility = "visible";
 
+	for( i in scores)
+	{
+		cells[i].innerHTML = scores[i].total;		
+	}
 }
+
+
+
+
+
 

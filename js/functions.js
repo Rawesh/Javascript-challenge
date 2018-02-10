@@ -24,7 +24,8 @@ function buttonAttr()
 }
 
 function compare(choise, num)
-{   // Get array parties.
+{
+   // Get array parties.
 	for (parties in subjects[num].parties)
 	{
 		var party = subjects[num].parties[parties].name;
@@ -40,10 +41,8 @@ function compare(choise, num)
 				// array subject party name.
 				if (names === party)
 				{
-					var cells = document.getElementsByClassName('cell');
 					scores[i].total += 1;
-					cells[i].innerHTML = scores[i].total;
-					console.log(scores[i].total);					
+					console.log(names, scores[i].total);					
 				}
 			}
 		}
@@ -63,6 +62,21 @@ function compare(choise, num)
 			}	
 		}
 	}
+	console.log(scores.sort(sortTotal));
+	scores.sort(sortTotal);
+}
 
-	scores.sort(function(a, b){return b.total - a.total});
+// sort total score
+function sortTotal(a, b) 
+{
+  var a = a.total;
+  var b = b.total;
+  
+  var comparison = 0;
+  if (a > b) {
+    comparison = 1;
+  } else if (a < b) {
+    comparison = -1;
+  }
+  return comparison;
 }
