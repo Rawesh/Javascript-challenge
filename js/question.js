@@ -14,6 +14,7 @@ var result = document.getElementById("result");
 
 // result elements
 var table = document.getElementById("table");
+var aside = document.getElementById("aside");
 
 // arrays
 var num = -1;
@@ -41,7 +42,8 @@ var scores = [
 	{name: "Libertarische Partij", total: 0}
 ];
 
-// set values in table
+
+// set values in table	1
 for (i in scores)
 {
 
@@ -68,7 +70,9 @@ for (i in scores)
 }
 
 function begin()
-{
+{	
+	num++;
+
 	// set buttons visible
 	agree.style.visibility = "visible";
 	disagree.style.visibility = "visible";
@@ -77,15 +81,16 @@ function begin()
 	start.style.visibility = "hidden";
 
 	// set question in header and title
-	header.innerHTML = subjects[0].title;
-	question.innerHTML = subjects[0].statement;
+	header.innerHTML = subjects[num].title;
+	question.innerHTML = subjects[num].statement;
+
 
 	//this count num up
-	num++;
+	
 
 	//write to console
-	console.log(subjects[0].title);
-	console.log(subjects[0].statement);
+	console.log(subjects[num].title);
+	console.log(subjects[num].statement);
 	console.log(num);
 }
 
@@ -110,6 +115,14 @@ function skipQuestion()
 // one question back
 function goBack()
 {
+	for( i in scores)
+	{
+		if (scores[i].total > 0)
+		{		
+			scores[i].total -= 1;
+			console.log(scores[i].name, scores[i].total);
+		}		
+	}
 	// this count num down
 	var countDown = --num;
 
@@ -202,10 +215,12 @@ function getResult()
 {
 	var cells = document.getElementsByClassName('cell');
 
-
+	//make visible
 	result.style.visibility = "hidden";
 	table.style.visibility = "visible";
+	aside.style.visibility = "visible";
 
+	//set scores
 	for( i in scores)
 	{
 		cells[i].innerHTML = scores[i].total;		

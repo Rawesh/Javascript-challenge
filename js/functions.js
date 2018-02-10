@@ -80,3 +80,4 @@ function sortTotal(a, b)
   }
   return comparison;
 }
+

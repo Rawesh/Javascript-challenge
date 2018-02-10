@@ -1,34 +1,65 @@
+body
+{
+	background-position: fixed;
+}
+
+main
+{
+	display: flex;
+	flex-direction: column;
+}
+
 article
 {
 	margin: 0 auto;
     width: 50%;
     padding: 10px;
-    background-color: cyan;
+    background-color: black;
+    opacity: 0.8;
+    color: white;
     font-size: 20px;
     border: solid 1px;
 }
 
+h1
+{
+	color: red;
+}
+
+aside
+{
+	margin: 0 auto;
+	width: 50%;
+    padding: 10px;
+    background-color: black;
+    opacity: 0.8;
+    font-size: 20px;
+}
+
+
+
 button
 {
+	border: none;
 	text-align: center;
 	margin: 2px;
 	width: 15%;
 	height: 35px;
-	background-color: lightgray;
+	background-color: lightgreen;
+	border-radius: 40%;
+	font-size: 15px;
 }
 
 button:hover
 {
-	width: 25%;
-	height: 40px;
-	background-color: lightgreen;
+	background-color: blue;
 }
 
 hr
 {
   height: 10px;
   border: 0;
-  box-shadow: 0 10px 10px -10px #8c8c8c inset;
+  box-shadow: 0 10px 10px -10px black inset;
 }
 
 table, th, td {
@@ -67,7 +98,7 @@ th
 	visibility: visible;
 }
 
-#agree, #disagree, #back, #skip, #result, #non, #table
+#agree, #disagree, #back, #skip, #result, #non, #aside
 {
 	visibility: hidden;
 }
