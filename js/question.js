@@ -10,14 +10,12 @@ var skip = document.getElementById("skip");
 var back = document.getElementById("back");
 var start = document.getElementById("start");
 var non = document.getElementById("non");
-var aside = document.getElementById("aside");
-var aside1 = document.getElementById("aside1");
 var result = document.getElementById("result");
 var match = document.getElementById("resultButton");
 
-// result elements
-var table = document.getElementById("table");
-var table2 = document.getElementById("table2");
+//elements
+var aside = document.getElementById("aside");
+
 
 // arrays
 var num = -1;
@@ -191,30 +189,39 @@ function setDisAgree()
 
 function filterParties()
 {
-	resultButton.style.visibility = "hidden";
-	table2.style.visibility = "visible";
-	aside1.style.visibility = "visible";
+	var nText = "";
+	var sText = ""
 
-	var cells = document.getElementsByClassName('cell');
-	var filter = 1;
+	for (var i = 0; i < scores.length; i++) 
+	{
+		if (scores[i].total > 0)
+		{
+			console.log(scores[i].name, scores[i].total);
+			nText += scores[i].name + "<br>";
+			sText += scores[i].total + "<br>";
+		}
 
-	// get only the selected parties		
-		showResult(filter);
+	}
+	var name = document.getElementById("name").innerHTML = nText;
+	var score = document.getElementById("score").innerHTML = sText;
+	aside.style.visibility = "visible";
 }
 
 function getResult()
 {
-	var cells = document.getElementsByClassName('cell');
-	var filter = 0;
+	var nText = "";
+	var sText = "";
 
-	//make visible
-	table.style.visibility = "visible";
-	result.style.visibility = "hidden"
+	for (var i = 0; i < scores.length; i++) 
+	{
+		console.log(scores[i].name, scores[i].total);
+		nText += scores[i].name + "<br>";
+		sText += scores[i].total + "<br>";
+	}
+
+	var name = document.getElementById("name").innerHTML = nText;
+	var score = document.getElementById("score").innerHTML = sText;
 	aside.style.visibility = "visible";
-	
-	// get result of all parties
-	showResult(filter);
-
 }
 
 
