@@ -1,4 +1,21 @@
 Javascript challenge to do lijst:
 
-- filteren op grote partijen en seculiere partijen
+-filters:
+	Zittende partijen = 
+						VVD
+						Pvda
+						Pvv
+						SP
+						CDA
+						D66
+						Christen Unie
+						GroenLinks
+						SGP
+						Partij voor de dieren
+						50Plus
+						VNL
+						Denk
+						Forum voor democratie
+	Alle partijen.
+	
 - per vraag meer gewicht geven

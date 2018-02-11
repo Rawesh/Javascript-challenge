@@ -96,8 +96,8 @@ var subjects =
 	] 
 },
 {
-	title: "Einde",
-	statement: "Druk op resultaat om de scores van de partijen te zien."
+	title: "Resultaat",
+	statement: "Klik op de resultaat knop om de matching te bekijken."
 }
 ];
 

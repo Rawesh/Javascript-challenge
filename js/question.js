@@ -10,15 +10,19 @@ var skip = document.getElementById("skip");
 var back = document.getElementById("back");
 var start = document.getElementById("start");
 var non = document.getElementById("non");
+var aside = document.getElementById("aside");
+var aside1 = document.getElementById("aside1");
 var result = document.getElementById("result");
+var match = document.getElementById("resultButton");
 
 // result elements
 var table = document.getElementById("table");
-var aside = document.getElementById("aside");
+var table2 = document.getElementById("table2");
 
 // arrays
 var num = -1;
 var choises = [];
+
 var scores = [
 	{name: "VVD", total: 0},
 	{name: "CDA", total: 0},
@@ -41,33 +45,6 @@ var scores = [
 	{name: "50plus", total: 0},
 	{name: "Libertarische Partij", total: 0}
 ];
-
-
-// set values in table	1
-for (i in scores)
-{
-
-	console.dir(scores[i]);
-	// create alements
-	var tr = document.createElement("tr");
-	var td = document.createElement("td");
-	
-	// text in element in var 
-	var pNames = document.createTextNode(scores[i].name);
-	var pScore = document.createTextNode(scores[i].total);
-
-	// set text in element, element in element
-	td.appendChild(pNames);
-	tr.appendChild(td);
-	// hier moet nog de score van de compare functie komen
-	td = document.createElement("td");
-	td.className = 'cell';
-	td.appendChild(pScore);
-	tr.appendChild(td);
-
-	// --------------------
-	table.appendChild(tr);
-}
 
 function begin()
 {	
@@ -211,22 +188,34 @@ function setDisAgree()
 	console.log(num);
 }
 
+
+function filterParties()
+{
+	resultButton.style.visibility = "hidden";
+	table2.style.visibility = "visible";
+	aside1.style.visibility = "visible";
+
+	var cells = document.getElementsByClassName('cell');
+	var filter = 1;
+
+	// get only the selected parties		
+		showResult(filter);
+}
+
 function getResult()
 {
 	var cells = document.getElementsByClassName('cell');
+	var filter = 0;
 
 	//make visible
-	result.style.visibility = "hidden";
 	table.style.visibility = "visible";
+	result.style.visibility = "hidden"
 	aside.style.visibility = "visible";
+	
+	// get result of all parties
+	showResult(filter);
 
-	//set scores
-	for( i in scores)
-	{
-		cells[i].innerHTML = scores[i].total;		
-	}
 }
-
 
 
 
