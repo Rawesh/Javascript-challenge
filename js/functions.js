@@ -15,7 +15,6 @@ function buttonAttr()
 		skip.style.visibility = "hidden";
 		back.style.visibility = "hidden";
 		non.style.visibility = "hidden";
-		resultButton.style.visibility = "visible";
 		result.style.visibility = "visible";
 	}
 	else

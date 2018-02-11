@@ -1,13 +1,9 @@
 body
 {
+	background-image: url(img/achtergrond.jpg);
 	background-position: fixed;
 }
 
-main
-{
-	display: flex;
-    flex-direction: row;
-}
 
 article
 {
@@ -22,9 +18,30 @@ article
     border: solid 1px;
 }
 
+fieldset
+{
+	margin-left: 50%;
+	background-color: peru;
+}
+
+hr
+{
+	background-color: orange;
+}
+
 h1
 {
 	color: red;
+}
+
+#name
+{
+	color: red;
+}
+
+#score
+{
+	color: green;
 }
 
 aside
@@ -33,10 +50,10 @@ aside
 	width: 80%;
     padding: 10px;
     background-color: black;
-    opacity: 0.8;
+    opacity: 0.9;
     display: flex;
     flex-direction: row;
-    color: white;
+    border: solid 1px white;
 }
 
 
@@ -45,7 +62,7 @@ button
 	border: none;
 	text-align: center;
 	margin: 2px;
-	background-color: yellow;
+	background-color: Chartreuse;
 	border-radius: 10%;
 	font-size: 15px;
 }
@@ -55,12 +72,6 @@ button:hover
 	background-color: blue;
 }
 
-hr
-{
-  height: 10px;
-  border: 0;
-  box-shadow: 0 10px 10px -10px black inset;
-}
 
 #back
 {
@@ -74,7 +85,7 @@ hr
 	visibility: visible;
 }
 
-#agree, #disagree, #back, #skip, #result, #non, #resultButton, #aside
+#agree, #disagree, #back, #skip, #result, #result2, #non, #resultButton, #resultButton1, #aside
 {
 	visibility: hidden;
 }

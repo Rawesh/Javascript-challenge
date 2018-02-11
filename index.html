@@ -18,18 +18,28 @@
 		<button id="skip" onclick="skipQuestion()">Sla over</button>
 		<br>
 		<button id="back" onclick="goBack()"><i class="fas fa-chevron-circle-left" style="font-size:30px;"></i></button>
-		<button id="result" onclick="getResult()">Alle partijen</button>
-		<button id="resultButton" onclick="filterParties()">Gemachte partijen</button>	
+		<button id="result" onclick="getResult()">Resultaten</button>	
 	</article>
+
 	<aside id="aside">
-		<h3 id="name"></h3>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<p id="name"></p>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<p id="score"></p>
+		<fieldset>
+			<label><i class="fas fa-filter"></i> :</label>
+			<br>
+			<ul>
+				<li><button id="result2" onclick="getResult()">Alle partijen</button></li>
+				<li><button id="resultButton" onclick="filterScores()">Gemachte partijen</button></li>
+				<li><button id="resultButton1" onclick="filterParties()">Grote partijen</button></li>
+			</ul>
+		</fieldset>
 	</aside>
 
-<!-- link to javascript -->
-<script src="js/data.js" type="text/javascript" ></script>
-<script src="js/question.js" type="text/javascript" ></script>
-<script src="js/functions.js" type="text/javascript" ></script>
+	<!-- link to javascript -->
+	<script src="js/data.js" type="text/javascript" ></script>
+	<script src="js/question.js" type="text/javascript" ></script>
+	<script src="js/functions.js" type="text/javascript" ></script>
 </body>
 </html>

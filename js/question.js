@@ -187,10 +187,10 @@ function setDisAgree()
 }
 
 
-function filterParties()
+function filterScores()
 {
 	var nText = "";
-	var sText = ""
+	var sText = "";
 
 	for (var i = 0; i < scores.length; i++) 
 	{
@@ -202,9 +202,42 @@ function filterParties()
 		}
 
 	}
+
+	//set option list
 	var name = document.getElementById("name").innerHTML = nText;
 	var score = document.getElementById("score").innerHTML = sText;
-	aside.style.visibility = "visible";
+	document.getElementById("result2").style.visibility = "visible";
+	result.style.visibility = "hidden";
+
+	//description
+	header.innerHTML = "Gematchte Partijen";
+	question.innerHTML = "Dit zijn de partijen die matchen met jou stemmen.";
+}
+
+function filterParties()
+{
+	var nText = "";
+	var sText = "";
+
+	for (var i = 0; i < scores.length; i++) 
+	{
+		if (scores[i].name === "VVD" || scores[i].name === "PVV" || scores[i].name === "CDA" || scores[i].name === "D66" || scores[i].name === "GroenLinks"
+			|| scores[i].name === "SP")
+		{
+			console.log(scores[i].name, scores[i].total);
+			nText += scores[i].name + "<br>";
+			sText += scores[i].total + "<br>";
+		}
+
+	}
+	//set option list
+	var name = document.getElementById("name").innerHTML = nText;
+	var score = document.getElementById("score").innerHTML = sText;
+	document.getElementById("result2").style.visibility = "visible";
+
+	//description
+	header.innerHTML = "Grote partijen";
+	question.innerHTML = "Dit zijn de partijen met de meeste zetels.";
 }
 
 function getResult()
@@ -221,7 +254,16 @@ function getResult()
 
 	var name = document.getElementById("name").innerHTML = nText;
 	var score = document.getElementById("score").innerHTML = sText;
+
+	//make the buttons visible
 	aside.style.visibility = "visible";
+	result.style.visibility = "hidden";
+	result2.style.visibility = "visible";
+	resultButton.style.visibility = "visible";
+	resultButton1.style.visibility = "visible";
+
+	header.innerHTML = "Alle partijen";
+	question.innerHTML = "Dit is de overzicht van alle partijen.";
 }
 
 
