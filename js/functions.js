@@ -1,11 +1,11 @@
 function buttonAttr()
 {
 	// make button visible only when needed
-	if (num > 0 && num < 3)
+	if (num > 0 && num < 7)
 	{
 		back.style.visibility = "visible";
 	}
-	else if (num == 3)
+	else if (num == 7)
 	{
 		console.log(header);
 		console.log(question);
