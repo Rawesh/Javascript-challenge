@@ -16,6 +16,8 @@ function buttonAttr()
 		back.style.visibility = "hidden";
 		non.style.visibility = "hidden";
 		result.style.visibility = "visible";
+			send.style.visibility = "hidden";
+	number.style.visibility = "hidden";
 	}
 	else
 	{
@@ -30,6 +32,7 @@ function compare(choise, num)
 	{
 		var party = subjects[num].parties[parties].name;
 		var vote = subjects[num].parties[parties].position;
+		console.log(parseInt(number.value));
 		// If my choise is the same as party choise.
 		if (choise === vote)
 		{   // Get status array.
@@ -41,7 +44,7 @@ function compare(choise, num)
 				// array subject party name.
 				if (names === party)
 				{
-					scores[i].total += 1;
+					scores[i].total += parseInt(number.value);
 					console.log(names, scores[i].total);					
 				}
 			}

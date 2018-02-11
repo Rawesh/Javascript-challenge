@@ -16,6 +16,9 @@ var match = document.getElementById("resultButton");
 //elements
 var aside = document.getElementById("aside");
 
+//value in number
+var number = document.getElementById("number");
+var send = document.getElementById("send");
 
 // arrays
 var num = -1;
@@ -53,6 +56,8 @@ function begin()
 	disagree.style.visibility = "visible";
 	skip.style.visibility = "visible";
 	non.style.visibility = "visible";
+	send.style.visibility = "visible";
+	number.style.visibility = "visible";
 	start.style.visibility = "hidden";
 
 	// set question in header and title
@@ -67,6 +72,11 @@ function begin()
 	console.log(subjects[num].title);
 	console.log(subjects[num].statement);
 	console.log(num);
+}
+
+function sendValue()
+{
+	alert("Deze vraagt telt nu met de waarde :" + number.value)
 }
 
 function skipQuestion()

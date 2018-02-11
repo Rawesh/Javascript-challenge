@@ -44,6 +44,11 @@ h1
 	color: green;
 }
 
+input
+{
+	width: 50px;
+}
+
 aside
 {
 	margin: 0 auto;
@@ -85,7 +90,7 @@ button:hover
 	visibility: visible;
 }
 
-#agree, #disagree, #back, #skip, #result, #result2, #non, #resultButton, #resultButton1, #aside
+#agree, #disagree, #back, #skip, #result, #result2, #non, #resultButton, #resultButton1, #aside, #send, #number
 {
 	visibility: hidden;
 }

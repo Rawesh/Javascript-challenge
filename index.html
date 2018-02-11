@@ -9,7 +9,18 @@
 <body>
 	<article>
 		<h1 id="header"><center>StemWijzer</center></h1>
-		<p id="question"></p>
+		<p id="question">
+			Als je wilt gaan beginnen druk op start.
+			<br>
+			Elk vraag is 1 punt waard, je kan de waarde verhogen door het in te voeren en verzenden.
+			Als dat gebeurd, wordt de vraag met de aangegeven waarde geteld.
+		</p>
+
+		<input type="number" id="number" step="0.01" value="1">
+		<button id="send" onclick="sendValue()">Zend</button>
+
+		<br>
+		<br>
 
 		<button id="start" onclick="begin()">Start</button>
 		<button id="agree" onclick="setAgree()">Eens</button>
@@ -25,7 +36,7 @@
 		<p id="name"></p>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<p id="score"></p>
+		<p id="score"></p> 	
 		<fieldset>
 			<label><i class="fas fa-filter"></i> :</label>
 			<br>
