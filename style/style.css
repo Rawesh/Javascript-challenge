@@ -30,10 +30,6 @@ hr
 	background-color: orange;
 }
 
-#subjects
-{
-	color: cyan;
-}
 
 h1
 {
@@ -43,16 +39,6 @@ h1
 h3
 {
 	color: darkred;
-}
-
-#name
-{
-	color: red;
-}
-
-#score, #second
-{
-	color: green;
 }
 
 input
@@ -124,14 +110,9 @@ footer, #showExplanation, #agree, #disagree, #back, #skip, #result, #result2, #n
 	font-size: 10px;
 }
 
-#parties:hover
-{
-	color: purple;
-}
-
 #first
 {
-	color: blue;
+	color: cyan;
 	margin-left: 45%;
 }
 
@@ -148,4 +129,14 @@ footer, #showExplanation, #agree, #disagree, #back, #skip, #result, #result2, #n
 #fieldset
 {
 	display: none;
+}
+
+#name
+{
+	color: red;
+}
+
+#score, #second
+{
+	color: green;
 }
