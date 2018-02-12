@@ -16,8 +16,9 @@
 			Als dat gebeurd, wordt de vraag met de aangegeven waarde geteld.
 		</p>
 
+		<label id="send">Waarde in punten (Kan wijzigen):</label>
+		<br>
 		<input type="number" id="number" step="0.01" value="1">
-		<button id="send" onclick="sendValue()">Zend</button>
 
 		<br>
 		<br>
@@ -30,16 +31,10 @@
 		<br>
 		<button id="showExplanation" onclick="showPartyExplanation()">Wat vinden de partijen</button>
 		<br>
-		<button id="back" onclick="goBack()"><i class="fas fa-chevron-circle-left" style="font-size:30px;"></i></button>
-		<button id="result" onclick="getResult()">Resultaten</button>	
+		<button id="back" onclick="goBack()"><i class="fas fa-chevron-circle-left" style="font-size:30px;"></i></button>	
 	</article>
 
-	<aside id="aside">
-		<p id="name"></p>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<p id="score"></p> 	
-		<fieldset>
+		<fieldset id="fieldset">
 			<label><i class="fas fa-filter"></i> :</label>
 			<br>
 			<ul>
@@ -47,8 +42,25 @@
 				<li><button id="resultButton" onclick="filterScores()">Match</button></li>
 				<li><button id="resultButton1" onclick="filterParties()">Grote partijen</button></li>
 			</ul>
+			<br>
+			<div id="parties"></div>
+			<hr>
+			<button id="result" onclick="getResult()">Resultaten</button>
 		</fieldset>
+
+	<aside id="aside">
+
+		<p id="name"></p>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<p id="score"></p> 	
+
+		<div id="first"></div>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<div id="second"></div>
 	</aside>
+
 	<footer id="footer">
 		<div id="subject"></div>
 	</footer>

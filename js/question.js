@@ -1,7 +1,10 @@
 // select the elements
-// content
+var fieldset = document.getElementById("fieldset");
 var header = document.getElementById("header");
 var question = document.getElementById("question");
+var send = document.getElementById("send");
+var aside = document.getElementById("aside");
+var footer = document.getElementById("footer");
 
 //buttons
 var agree = document.getElementById("agree");
@@ -14,13 +17,9 @@ var result = document.getElementById("result");
 var match = document.getElementById("resultButton");
 var showExplanation = document.getElementById("showExplanation");
 
-//elements
-var aside = document.getElementById("aside");
-var footer = document.getElementById("footer");
-
 //value in number
 var number = document.getElementById("number");
-var send = document.getElementById("send");
+
 
 // arrays
 var num = -1;
@@ -93,11 +92,6 @@ function showPartyExplanation()
 		setName = document.getElementById("subject").innerHTML += name;
 		setName = document.getElementById("subject").innerHTML += explanation;
 	}
-}
-
-function sendValue()
-{
-	alert("Deze vraagt telt nu met de waarde :" + number.value)
 }
 
 function skipQuestion()
@@ -219,7 +213,7 @@ function setAgree()
 function setDisAgree()
 {
 	footer.style.visibility = "hidden";
-	
+
 	//delete prev explanation
 	document.getElementById("subject").innerHTML = "";
 
@@ -242,60 +236,6 @@ function setDisAgree()
 	console.log(num);
 }
 
-
-function filterScores()
-{
-	var nText = "";
-	var sText = "";
-
-	for (var i = 0; i < scores.length; i++) 
-	{
-		if (scores[i].total > 0)
-		{
-			console.log(scores[i].name, scores[i].total);
-			nText += scores[i].name + "<br>";
-			sText += scores[i].total + "<br>";
-		}
-
-	}
-
-	//set option list
-	var name = document.getElementById("name").innerHTML = nText;
-	var score = document.getElementById("score").innerHTML = sText;
-	document.getElementById("result2").style.visibility = "visible";
-	result.style.visibility = "hidden";
-
-	//description
-	header.innerHTML = "Gematchte Partijen";
-	question.innerHTML = "Dit zijn de partijen die matchen met jou stemmen.";
-}
-
-function filterParties()
-{
-	var nText = "";
-	var sText = "";
-
-	for (var i = 0; i < scores.length; i++) 
-	{
-		if (scores[i].name === "VVD" || scores[i].name === "PVV" || scores[i].name === "CDA" || scores[i].name === "D66" || scores[i].name === "GroenLinks"
-			|| scores[i].name === "SP")
-		{
-			console.log(scores[i].name, scores[i].total);
-			nText += scores[i].name + "<br>";
-			sText += scores[i].total + "<br>";
-		}
-
-	}
-	//set option list
-	var name = document.getElementById("name").innerHTML = nText;
-	var score = document.getElementById("score").innerHTML = sText;
-	document.getElementById("result2").style.visibility = "visible";
-
-	//description
-	header.innerHTML = "Grote partijen";
-	question.innerHTML = "Dit zijn de partijen met de meeste zetels.";
-}
-
 function getResult()
 {
 	var nText = "";
@@ -307,20 +247,24 @@ function getResult()
 		nText += scores[i].name + "<br>";
 		sText += scores[i].total + "<br>";
 	}
-
 	var name = document.getElementById("name").innerHTML = nText;
 	var score = document.getElementById("score").innerHTML = sText;
 
 	//make the buttons visible
 	aside.style.visibility = "visible";
-	result.style.visibility = "hidden";
 	result2.style.visibility = "visible";
 	resultButton.style.visibility = "visible";
 	resultButton1.style.visibility = "visible";
+	result.style.visibility = "hidden";
+
+	document.getElementById("parties").style.display = "none";
 
 	header.innerHTML = "Alle partijen";
-	question.innerHTML = "Dit is de overzicht van alle partijen.";
+	question.innerHTML = "Dit is de overzicht van alle partijen." + "<br>" + "De blauwe partij namen zijn de partijen die gefilterd zijn.";
 }
+
+
+
 
 
 
