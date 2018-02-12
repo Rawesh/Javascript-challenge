@@ -36,19 +36,26 @@
 	</article>
 
 		<fieldset id="fieldset">
-			<label><i class="fas fa-filter"></i> :</label>
-			<br>
-			<ul>
-				<li><button id="result2" onclick="getResult()">Alle partijen</button></li>
-				<li><button id="resultButton" onclick="filterScores()">Match</button></li>
-				<li><button id="resultButton1" onclick="filterParties()">Grote partijen</button></li>
-			</ul>
 			<div id="block">
-				<h2>Filters</h2>
+				<h2><i class="fas fa-filter"></i> :</h2>
+
 				<br>
+
 				<div id="parties"></div>
+				
 				<hr>
+
 				<button id="result" onclick="getResult()">Resultaten</button>
+			</div>
+
+			<div id="filterOne">
+				<label><i class="fas fa-filter"></i> :</label>
+				<br>
+				<ul>
+					<li><button id="result2" onclick="getResult()">Alle partijen</button></li>
+					<li><button id="resultButton" onclick="filterScores()">Match</button></li>
+					<li><button id="resultButton1" onclick="filterParties()">Grote partijen</button></li>
+				</ul>
 			</div>
 		</fieldset>
 

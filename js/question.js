@@ -258,6 +258,7 @@ function getResult()
 	result.style.visibility = "hidden";
 
 	document.getElementById("block").style.display = "none";
+	document.getElementById("filterOne").style.display = "block"
 
 	header.innerHTML = "Alle partijen";
 	question.innerHTML = "Dit is de overzicht van alle partijen." + "<br>" + "De blauwe partij namen zijn de partijen die gefilterd zijn.";
