@@ -28,6 +28,8 @@
 		<button id="non" onclick="setNon()">Geen van beide</button>
 		<button id="skip" onclick="skipQuestion()">Sla over</button>
 		<br>
+		<button id="showExplanation" onclick="showPartyExplanation()">Wat vinden de partijen</button>
+		<br>
 		<button id="back" onclick="goBack()"><i class="fas fa-chevron-circle-left" style="font-size:30px;"></i></button>
 		<button id="result" onclick="getResult()">Resultaten</button>	
 	</article>
@@ -42,11 +44,14 @@
 			<br>
 			<ul>
 				<li><button id="result2" onclick="getResult()">Alle partijen</button></li>
-				<li><button id="resultButton" onclick="filterScores()">Gemachte partijen</button></li>
+				<li><button id="resultButton" onclick="filterScores()">Match</button></li>
 				<li><button id="resultButton1" onclick="filterParties()">Grote partijen</button></li>
 			</ul>
 		</fieldset>
 	</aside>
+	<footer id="footer">
+		<div id="subject"></div>
+	</footer>
 
 	<!-- link to javascript -->
 	<script src="js/data.js" type="text/javascript" ></script>

@@ -15,9 +15,12 @@ function buttonAttr()
 		skip.style.visibility = "hidden";
 		back.style.visibility = "hidden";
 		non.style.visibility = "hidden";
+		showExplanation.style.visibility = "hidden";
+		send.style.visibility = "hidden";
+		number.style.visibility = "hidden";
+		showExplanation.style.visibility = "hidden";
+
 		result.style.visibility = "visible";
-			send.style.visibility = "hidden";
-	number.style.visibility = "hidden";
 	}
 	else
 	{

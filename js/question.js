@@ -12,9 +12,11 @@ var start = document.getElementById("start");
 var non = document.getElementById("non");
 var result = document.getElementById("result");
 var match = document.getElementById("resultButton");
+var showExplanation = document.getElementById("showExplanation");
 
 //elements
 var aside = document.getElementById("aside");
+var footer = document.getElementById("footer");
 
 //value in number
 var number = document.getElementById("number");
@@ -48,7 +50,10 @@ var scores = [
 ];
 
 function begin()
-{	
+{
+	//show the explanation button
+	showExplanation.style.visibility = "visible";	
+
 	num++;
 
 	// set buttons visible
@@ -58,6 +63,7 @@ function begin()
 	non.style.visibility = "visible";
 	send.style.visibility = "visible";
 	number.style.visibility = "visible";
+	showExplanation.style.visibility = "visible";
 	start.style.visibility = "hidden";
 
 	// set question in header and title
@@ -74,6 +80,21 @@ function begin()
 	console.log(num);
 }
 
+function showPartyExplanation()
+{
+	footer.style.visibility = "visible";
+
+	var name = "";
+	var explanation = "";
+	for (var i = 0; i < subjects[num].parties.length; i++)
+	{
+		name = "<h3>" + subjects[num].parties[i].name + "</h3>";
+		explanation = "<p>" + subjects[num].parties[i].explanation + "</p>";
+		setName = document.getElementById("subject").innerHTML += name;
+		setName = document.getElementById("subject").innerHTML += explanation;
+	}
+}
+
 function sendValue()
 {
 	alert("Deze vraagt telt nu met de waarde :" + number.value)
@@ -81,6 +102,11 @@ function sendValue()
 
 function skipQuestion()
 {
+	footer.style.visibility = "hidden";
+
+	//delete prev explanation
+	document.getElementById("subject").innerHTML = "";
+	
 	//this count num up
 	num++;
 
@@ -100,6 +126,11 @@ function skipQuestion()
 // one question back
 function goBack()
 {
+	footer.style.visibility = "hidden";
+
+	//delete prev explanation
+	document.getElementById("subject").innerHTML = "";
+
 	for( i in scores)
 	{
 		if (scores[i].total > 0)
@@ -133,6 +164,11 @@ function goBack()
 
 function setNon()
 {
+	footer.style.visibility = "hidden";
+
+	//delete prev explanation
+	document.getElementById("subject").innerHTML = "";
+
 	var choise = choises[num] = 'ambivalent';
 	compare(choise, num);
 
@@ -156,6 +192,11 @@ function setNon()
 
 function setAgree()
 {	
+	footer.style.visibility = "hidden";
+
+	//delete prev explanation
+	document.getElementById("subject").innerHTML = ""
+
 	var choise = choises[num] = 'pro';
 	compare(choise, num);
 	//this count num up
@@ -177,6 +218,11 @@ function setAgree()
 
 function setDisAgree()
 {
+	footer.style.visibility = "hidden";
+	
+	//delete prev explanation
+	document.getElementById("subject").innerHTML = "";
+
 	var choise = choises[num] ='contra';
 	compare(choise, num);
 
