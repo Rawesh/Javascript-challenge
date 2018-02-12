@@ -63,7 +63,7 @@ function begin()
 	send.style.visibility = "visible";
 	number.style.visibility = "visible";
 	showExplanation.style.visibility = "visible";
-	start.style.visibility = "hidden";
+	start.style.display = "none";
 
 	// set question in header and title
 	header.innerHTML = subjects[num].title;
@@ -257,7 +257,7 @@ function getResult()
 	resultButton1.style.visibility = "visible";
 	result.style.visibility = "hidden";
 
-	document.getElementById("parties").style.display = "none";
+	document.getElementById("block").style.display = "none";
 
 	header.innerHTML = "Alle partijen";
 	question.innerHTML = "Dit is de overzicht van alle partijen." + "<br>" + "De blauwe partij namen zijn de partijen die gefilterd zijn.";

@@ -12,13 +12,14 @@
 		<p id="question">
 			Als je wilt gaan beginnen druk op start.
 			<br>
-			Elk vraag is 1 punt waard, je kan de waarde verhogen door het in te voeren en verzenden.
+			Elk vraag is 1 punt waard, je kan de waarde verhogen door het in te voeren.
+			<br>
 			Als dat gebeurd, wordt de vraag met de aangegeven waarde geteld.
 		</p>
 
 		<label id="send">Waarde in punten (Kan wijzigen):</label>
 		<br>
-		<input type="number" id="number" step="0.01" value="1">
+		<input type="number" id="number" step="0.1" min="1" max="10" value="1">
 
 		<br>
 		<br>
@@ -42,10 +43,13 @@
 				<li><button id="resultButton" onclick="filterScores()">Match</button></li>
 				<li><button id="resultButton1" onclick="filterParties()">Grote partijen</button></li>
 			</ul>
-			<br>
-			<div id="parties"></div>
-			<hr>
-			<button id="result" onclick="getResult()">Resultaten</button>
+			<div id="block">
+				<h2>Filters</h2>
+				<br>
+				<div id="parties"></div>
+				<hr>
+				<button id="result" onclick="getResult()">Resultaten</button>
+			</div>
 		</fieldset>
 
 	<aside id="aside">

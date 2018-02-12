@@ -24,8 +24,9 @@ function buttonAttr()
 		showExplanation.style.visibility = "hidden";
 
 		result.style.visibility = "visible";
-		fieldset.style.display = "block";
 
+		fieldset.style.display = "block";
+		
 		//zet filterbuttons in the aside
 		var pNames = "";
 
@@ -93,9 +94,9 @@ function sortTotal(a, b)
   var b = b.total;
   
   var comparison = 0;
-  if (a > b) {
+  if (b > a) {
     comparison = 1;
-  } else if (a < b) {
+  } else if (b < a) {
     comparison = -1;
   }
   return comparison;
