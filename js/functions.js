@@ -11,7 +11,7 @@ function buttonAttr()
 		console.log(question);
 
 		header.innerHTML = "Filters";
-		question.innerHTML = "Kies uw filters";
+		question.innerHTML = "Kies filters";
 
 		agree.style.visibility = "hidden";
 		disagree.style.visibility = "hidden";
@@ -93,6 +93,7 @@ function sortTotal(a, b)
   var a = a.total;
   var b = b.total;
   
+  //compare total a and total b
   var comparison = 0;
   if (b > a) {
     comparison = 1;
