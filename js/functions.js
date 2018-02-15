@@ -66,22 +66,6 @@ function compare(choise, num)
 				}
 			}
 		}
-		else
-		{
-			// if vote is not the same give 0 pionts
-			for( i in scores)
-			{
-				var names = scores[i].name;
-				var totalScore = scores[i].total;
-				// If array score party name is the same as
-				// array subject party name.
-				if (names === party)
-				{
-					scores[i].total += 0;
-					console.log(names, scores[i].total);					
-				}
-			}	
-		}
 	}
 	console.log(scores.sort(sortTotal));
 	scores.sort(sortTotal);
